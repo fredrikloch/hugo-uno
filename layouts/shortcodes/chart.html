@@ -1,0 +1,7 @@
+<div>
+    <canvas id="{{ .Get "id"}}" width="{{ .Get "width" }}" height="{{ .Get "height" }}"></canvas>
+    {{ if .Get "js" }}
+    <script src="{{ .Get "js" }}"></script>
+    <script src="../../js/Chart.min.js"></script>
+    {{ end }}
+</div>

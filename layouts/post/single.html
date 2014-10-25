@@ -1,0 +1,16 @@
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "sidebar.html" . }}
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <div class="post">
+          <h1>{{ .Title }}</h1>
+          <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+          {{ .Content }}
+        </div>
+        {{ partial "comments.html" .}}
+      </div>
+    </div>
+  </body>
+  {{ partial "script.html" .}}
+</html>
