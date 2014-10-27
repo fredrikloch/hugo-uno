@@ -1,6 +1,16 @@
-author = "Fredrik Loch"
-description = "A responsive hugo theme with awesome font's, charts and light-box galleries, the theme is based on https://github.com/daleanthony/Uno"
+name = "Hugo-Uno"
 license = "Creative Commons Attribution 4.0 International"
-name = "hugo-uno"
-source_repo = "https://github.com/SenjinDarashiva/hugo-uno"
+licenselink = "http://github.com/spf13/hugo/.."
+description = "An elegant open source and mobile first theme"
+homepage = "https://github.com/SenjinDarashiva/hugo-uno"
 tags = ["Responsive", "Awesome fonts", "Chart.js", "Lightbox", "gallery"]
+features = ["blog", ]
+
+[author]
+    name = "Fredrik Loch"
+    homepage = "http://fredrikloch.me"
+
+[original]
+    author =  "daleanthony"
+    homepage = "http://daleanthony.com/"
+    repo = "https://github.com/daleanthony/Uno"
