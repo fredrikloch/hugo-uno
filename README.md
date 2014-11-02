@@ -120,7 +120,7 @@ While JS is widely used, some themes and websites don't provide fallback for whe
 
 ## Development
 
-In order to develop or make changes to the theme you will need to have the sass compiler and bourbon both installed.  If you are running a Ghost environment locally then you should already have these installed as those are required to run Ghost.
+In order to develop or make changes to the theme you will need to have the sass compiler and bourbon both installed.
 
 To check installation run the following commands from a terminal and you should see the `> cli output` but your version numbers may vary.
 
