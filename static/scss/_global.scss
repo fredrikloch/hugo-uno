@@ -152,6 +152,7 @@ code {
   border-radius: $border-radius;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: .85em;
+  overflow-y: auto;
 }
 
 pre {
@@ -169,6 +170,7 @@ pre {
     padding: 0;
     background: none;
     border: none;
+    overflow-y: auto;
   }
 
 }
