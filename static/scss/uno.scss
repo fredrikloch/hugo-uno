@@ -1,6 +1,16 @@
 @import 'bourbon/bourbon';
-@import 'http://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
-
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(fonts/DroidSans.woff) format('woff');
+}
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url(fonts/GentiumBookBasic.woff) format('woff');
+}
 
 // ------------------------------
 // THE BASICS
@@ -32,7 +42,6 @@
 @import 'components/navigation.scss';
 @import 'components/pagination.scss';
 @import 'components/post-list.scss';
-@import 'components/forms.scss';
 
 // ------------------------------
 // MEDIA QUERIES
@@ -40,8 +49,3 @@
 
 @import 'media-queries.scss';
 
-// ------------------------------
-// EXTRAS
-// ------------------------------
-
-@import '../css/animate.css';
