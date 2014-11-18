@@ -111,6 +111,7 @@ The changes means that the following classes is used:
 * fa-tt -- twitter
 * fa-fb -- facebook
 * fa-ll -- linkedin
+* fa-fl -- flickr
 
 **No-JS fallback**
 While JS is widely used, some themes and websites don't provide fallback for when no JS is available (I'm looking at you [Squarespace](http://blog.squarespace.com/)). If for some weird reason a visitor has JS disabled your blog will still be usable.
