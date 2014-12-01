@@ -6,19 +6,19 @@
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content"> {{ if .Site.Params.logo }}
-                <a href="{{ .Site.BaseUrl }}" title="Länk till {{ .Site.Title }}"> <img src="{{ .Site.Params.logo }}" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /> </a> {{ end }}
+                <a href="{{ .Site.BaseUrl }}" title="link to homepage for {{ .Site.Title }}"> <img src="{{ .Site.Params.logo }}" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /> </a> {{ end }}
                 <h1 class="panel-cover__title panel-title">
-                    <a href="{{ .Site.BaseUrl }}" title="Länk till {{ .Site.Title }}">{{ .Site.Title }}</a>
+                    <a href="{{ .Site.BaseUrl }}" title="link to homepage for {{ .Site.Title }}">{{ .Site.Title }}</a>
                 </h1>
                 <hr class="panel-cover__divider" />
-                <p class="panel-cover__description"> {{ if .Site.Params.description }} {{ .Site.Params.description }} {{ else }} Den här sidan är byggd på <a href="http://gohugo.io">hugo</a> temat är byggt av<a href="http://fredrikloch.me">Fredrik</a> om du uppskattar det så finns det att hämta på <a href="https://github.com/SenjinDarashiva/hugo-uno">github</a> {{end}} </p>
+                <p class="panel-cover__description"> {{ if .Site.Params.description }} {{ .Site.Params.description }} {{ else }} This site is built using <a href="http://gohugo.io">hugo</a> and the theme is built by <a href="http://fredrikloch.me">Fredrik</a> if you enjoy it, it is available at <a href="https://github.com/SenjinDarashiva/hugo-uno">github</a> {{end}} </p>
                 <hr class="panel-cover__divider panel-cover__divider--secondary" />
                 <div class="navigation-wrapper">
                     <nav class="cover-navigation cover-navigation--primary">
                         <ul class="navigation">
-                            <li class="navigation__item"><a href="/#blogg" title="Länk till {{ .Site.Title }} blogg" class="blog-button">Blogg</a> </li>
+                            <li class="navigation__item"><a href="/#blog" title="link to {{ .Site.Title }} blog" class="blog-button">Blog</a> </li>
                             </br> {{ if .Site.Params.cv }}
-                            <li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="Länk till mitt CV " class="blog-button">CV</a> </li>
+                            <li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a> </li>
                             </br> {{ end }} </ul>
                     </nav> {{ partial "social.html" . }} </div>
             </div>
