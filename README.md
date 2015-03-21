@@ -21,6 +21,8 @@ baseurl = "http://fredrikloch.me/"
 canonifyurls = true
 title = "Fredrik Loch"
 author = "Fredrik Loch"
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+
 
 [indexes]
    category = "categories"
@@ -39,6 +41,12 @@ author = "Fredrik Loch"
   cover = "/images/background-cover.jpg"
   logo = "/img/logo-1.jpg"
 ```
+
+If you prefer to use discourse replace the "muut" line with the following(remember the trailing slash)
+
+'''
+  discourse = "http://discourse.yoursite.com/"
+'''
 Charts
 -
 To create charts I use [Chart.js](https://github.com/nnnick/Chart.js) which can be configured through basic js files. To add a chart to a post use the following short-code:

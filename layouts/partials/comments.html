@@ -4,3 +4,17 @@
 <script src="//cdn.muut.com/1/moot.min.js"></script>
 </section>
 {{ end }}
+{{ if .Site.Params.discourse }}
+<div id="discourse-comments"></div>
+
+<script type="text/javascript">
+  var discourseUrl = {{ .Site.Params.discourse }},
+      discourseEmbedUrl = {{ .Permalink }};
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+{{ end }}
