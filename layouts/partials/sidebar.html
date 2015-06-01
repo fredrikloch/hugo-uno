@@ -3,13 +3,13 @@
         <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
     </span>
 
-<header class="{{ if .IsNode }} {{ if eq .Url "/post/" }} panel-cover panel-cover--collapsed {{ else }}panel-cover {{ end }}{{ else }}panel-cover panel-cover--collapsed{{ end }}" {{ if .Site.Params.cover }} style="background-image: url({{ .Site.Params.cover }})" {{ end }} id="scriptHeader">
+<header class="{{ if .IsNode }} {{ if eq .URL "/post/" }} panel-cover panel-cover--collapsed {{ else }}panel-cover {{ end }}{{ else }}panel-cover panel-cover--collapsed{{ end }}" {{ if .Site.Params.cover }} style="background-image: url({{ .Site.Params.cover }})" {{ end }} id="scriptHeader">
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content"> {{ if .Site.Params.logo }}
-                <a href="{{ .Site.BaseUrl }}" title="link to homepage for {{ .Site.Title }}"> <img src="{{ .Site.Params.logo }}" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /> </a> {{ end }}
+                <a href="{{ .Site.BaseURL }}" title="link to homepage for {{ .Site.Title }}"> <img src="{{ .Site.Params.logo }}" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /> </a> {{ end }}
                 <h1 class="panel-cover__title panel-title">
-                    <a href="{{ .Site.BaseUrl }}"  title="link to homepage for {{ .Site.Title }}">{{ .Site.Title }}</a>
+                    <a href="{{ .Site.BaseURL }}"  title="link to homepage for {{ .Site.Title }}">{{ .Site.Title }}</a>
                 </h1>
                 <hr class="panel-cover__divider" />
                 <p class="panel-cover__description"> {{ if .Site.Params.description }} {{ .Site.Params.description }} {{ else }} This site is built using <a href="http://gohugo.io">hugo</a> and the theme is built by <a href="http://fredrikloch.me">Fredrik</a> if you enjoy it, it is available at <a href="https://github.com/SenjinDarashiva/hugo-uno">github</a> {{end}} </p>
@@ -36,9 +36,9 @@
         <div class="panel-main">
             <div class="panel-main__inner panel-inverted">
                 <div class="panel-main__content"> {{ if .Site.Params.logo }}
-                    <a href="{{ .Site.BaseUrl }}" title="link to homepage for {{ .Site.Title }}"> <img src="{{ .Site.Params.logo }}" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /> </a> {{ end }}
+                    <a href="{{ .Site.BaseURL }}" title="link to homepage for {{ .Site.Title }}"> <img src="{{ .Site.Params.logo }}" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /> </a> {{ end }}
                     <h1 class="panel-cover__title panel-title">
-                        <a href="{{ .Site.BaseUrl }}"  title="link to homepage for {{ .Site.Title }}">{{ .Site.Title }}</a>
+                        <a href="{{ .Site.BaseURL }}"  title="link to homepage for {{ .Site.Title }}">{{ .Site.Title }}</a>
                     </h1>
                     <hr class="panel-cover__divider" />
                     <p class="panel-cover__description"> {{ if .Site.Params.description }} {{ .Site.Params.description }} {{ else }} This site is built using <a href="http://gohugo.io">hugo</a> and the theme is built by <a href="http://fredrikloch.me">Fredrik</a> if you enjoy it, it is available at <a href="https://github.com/SenjinDarashiva/hugo-uno">github</a> {{end}} </p>
