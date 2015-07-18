@@ -2,8 +2,20 @@
         <i class="fa fa-bars btn-mobile-menu__icon"></i>
         <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
     </span>
-
-<header class="{{ if .IsNode }} {{ if eq .URL "/post/" }} panel-cover panel-cover--collapsed {{ else }}panel-cover {{ end }}{{ else }}panel-cover panel-cover--collapsed{{ end }}" {{ if .Site.Params.cover }} style="background-image: url({{ .Site.Params.cover }})" {{ end }} id="scriptHeader">
+<header class="
+{{ if .IsNode }}
+    {{ if eq .URL "/post/" }}
+        panel-cover panel-cover--collapsed
+    {{ else }}
+        {{ if in .URL "/tags/"  }}
+            panel-cover panel-cover--collapsed
+        {{ else }}
+            panel-cover
+        {{end }}
+    {{ end }}
+    {{ else }}
+        panel-cover panel-cover--collapsed
+    {{ end }}" {{ if .Site.Params.cover }} style="background-image: url({{ .Site.Params.cover }})" {{ end }} id="scriptHeader">
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content"> {{ if .Site.Params.logo }}
