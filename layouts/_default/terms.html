@@ -1,0 +1,36 @@
+{{ partial "head.html" . }}
+<body>
+    {{ partial "sidebar.html" . }}
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <section id="main">
+              <div>
+                <h1 id="title">{{ .Title }}</h1>
+                <style type="text/css">
+                        #double ul{
+                          width:760px;
+                          margin-bottom:20px;
+                          overflow:hidden;
+                        }
+                        #double li{
+                          line-height:1.5em;
+                          float:left;
+                          display:inline;
+                          width:50%;
+                        }
+                </style>
+                <ul id="double">
+                {{ $data := .Data }}
+                {{ range $key, $value := .Data.Terms }}
+                    <li>
+                        <a href="{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}
+                    </li>
+                {{ end }}
+               </ul>
+              </div>
+            </section>
+            </div>
+        </div>
+    </body>
+    {{ partial "script.html" .}}
+</html>
