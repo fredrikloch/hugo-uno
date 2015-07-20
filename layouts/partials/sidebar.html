@@ -1,17 +1,18 @@
-<span class="mobile btn-mobile-menu">
-        <i class="fa fa-bars btn-mobile-menu__icon"></i>
-        <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+<div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
     </span>
-<header class="
-{{ if .IsNode }}
-    {{ if or (eq .URL "/post/") (in .URL "/tags/") (in .URL "/categories/") }}
-        panel-cover panel-cover--collapsed
-    {{ else }}
-            panel-cover
-    {{ end }}
-    {{ else }}
-        panel-cover panel-cover--collapsed
-    {{ end }}" {{ if .Site.Params.cover }} style="background-image: url({{ .Site.Params.cover }})" {{ end }} id="scriptHeader">
+    <header class="
+        {{ if .IsNode }}
+        {{ if or (eq .URL "/post/") (in .URL "/tags/") (in .URL "/categories/") }}
+            panel-cover panel-cover--collapsed
+        {{ else }}
+                panel-cover
+        {{ end }}
+        {{ else }}
+            panel-cover panel-cover--collapsed
+        {{ end }}" {{ if .Site.Params.cover }} style="background-image: url({{ .Site.Params.cover }})" {{ end }}>
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content"> {{ if .Site.Params.logo }}
@@ -35,9 +36,14 @@
         <div class="panel-cover--overlay"></div>
     </div>
 </header>
+</div>
 <noscript>
     <style>
         #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
     </style>
 
     <header class="panel-cover panel-cover--collapsed" style="background-image: url({{ .Site.Params.cover }})">
