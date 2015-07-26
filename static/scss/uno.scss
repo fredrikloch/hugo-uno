@@ -1,17 +1,16 @@
 @import 'bourbon/bourbon';
 @font-face {
-  font-family: 'Droid Sans';
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Sans'), local('DroidSans'), url(fonts/DroidSans.woff) format('woff');
+  src: local('Ubuntu'), local('Ubuntu'), url(../fonts/Ubuntu-Regular.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Gentium Book Basic';
+  font-family: 'Source Serif Pro', serif;
   font-style: normal;
   font-weight: 400;
-  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url(fonts/GentiumBookBasic.woff) format('woff');
+  src: local('Source Serif Pro'), local('Source Serif Pro'), url(../fonts/SourceSerifPro-Regular.otf) format('otf');
 }
-
 // ------------------------------
 // THE BASICS
 // ------------------------------
