@@ -16,6 +16,7 @@
   color: darken($gray, 2%);
 }
 
+
   .post-meta__date {
     margin-right: .5em;
   }
@@ -59,6 +60,13 @@
     width: 30%;
     margin: 2em 0;
     border-top: 1px solid $gray-light;
+  }
+  .post-date{
+    margin-bottom: 1em;
+  }
+  p {
+    margin-top:1em;
+    line-height: 1.2em;
   }
 
 }
