@@ -77,3 +77,11 @@
 .error-code {
     font-size: 6em;
 }
+
+.sharing{
+  border-top: 5px solid $gray-light;
+
+  a {
+    color: $gray-dark;
+  }
+}
