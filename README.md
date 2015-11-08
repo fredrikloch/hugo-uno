@@ -44,9 +44,16 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 
 If you prefer to use discourse replace the "muut" line with the following(remember the trailing slash)
 
-'''
+```
   discourse = "http://discourse.yoursite.com/"
-'''
+```
+
+If you prefer to use disqus replace the "muut" line with the following
+
+```
+  disqus = "disqusUsername"
+```
+
 Charts
 -
 To create charts I use [Chart.js](https://github.com/nnnick/Chart.js) which can be configured through basic js files. To add a chart to a post use the following short-code:
