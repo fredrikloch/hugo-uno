@@ -1,0 +1,96 @@
+<!--
+chart.js bar chart shortlist
+
+Params:
+    name:       css #id of your slider
+    url:        path or url of your chart data json
+    includejs:  include needed js files
+-->
+{{ if $.Get "includejs" }}
+        <script src="{{ $.Page.Site.BaseURL }}/js/Chart.js"></script>
+{{ end }}
+
+{{ with .Get "url" }}
+    {{ $url := . }}
+    {{ with $.Get "name" }}
+        {{ $name := . }}
+          <canvas id="{{ $name }}" width="860" height="400"></canvas>
+        {{ $data := getJSON $url }}
+
+          <script>
+          var ctx = document.getElementById("{{ $name }}").getContext("2d");
+          var data = {
+              labels: [{{ range $data.data.labels }}{{ $responsive := . }}{{ . }},{{ end }} ],
+              datasets: [
+              {{ range $data.data.datasets }}
+                {{ $dataset := . }}
+                  {
+                      {{ if isset $dataset "label" }}label: {{ index $dataset "label" }},{{ end }}
+                      fillColor: {{ index $dataset "fillColor" }},
+                      strokeColor: {{ index $dataset "strokeColor" }},
+                      highlightFill: {{ index $dataset "highlightFill" }},
+                      highlightStroke: {{ index $dataset "highlightStroke" }},
+                      data:  [{{ range $dataset.data }}{{ $responsive := . }}{{ . }},{{ end }} ],
+                  },
+                {{ end }}
+              ]
+          };
+          {{ if isset $data "options" }}
+            var options = {
+{{ if isset $data.options "animation" }} animation: {{ index $data.options "animation"}}, {{ end }}
+{{ if isset $data.options "animationSteps" }} animationSteps: {{ index $data.options "animationSteps"}}, {{ end }}
+{{ if isset $data.options "animationEasing" }} animationEasing: {{ index $data.options "animationEasing"}}, {{ end }}
+{{ if isset $data.options "showScale" }} showScale: {{ index $data.options "showScale"}}, {{ end }}
+{{ if isset $data.options "scaleOverride" }} scaleOverride: {{ index $data.options "scaleOverride"}}, {{ end }}
+{{ if isset $data.options "scaleSteps" }} scaleSteps: {{ index $data.options "scaleSteps"}}, {{ end }}
+{{ if isset $data.options "scaleLineColor" }} scaleLineColor: {{ index $data.options "scaleLineColor"}}, {{ end }}
+{{ if isset $data.options "scaleLineWidth" }} scaleLineWidth: {{ index $data.options "scaleLineWidth"}}, {{ end }}
+{{ if isset $data.options "scaleShowLabels" }} scaleShowLabels: {{ index $data.options "scaleShowLabels"}}, {{ end }}
+{{ if isset $data.options "scaleLabel" }} scaleLabel: {{ index $data.options "scaleLabel"}}, {{ end }}
+{{ if isset $data.options "scaleIntegersOnly" }} scaleIntegersOnly: {{ index $data.options "scaleIntegersOnly"}}, {{ end }}
+{{ if isset $data.options "scaleBeginAtZero" }} scaleBeginAtZero: {{ index $data.options "scaleBeginAtZero"}}, {{ end }}
+{{ if isset $data.options "scaleFontFamily" }} scaleFontFamily: {{ index $data.options "scaleFontFamily"}}, {{ end }}
+{{ if isset $data.options "scaleFontSize" }} scaleFontSize: {{ index $data.options "scaleFontSize"}}, {{ end }}
+{{ if isset $data.options "scaleFontStyle" }} scaleFontStyle: {{ index $data.options "scaleFontStyle"}}, {{ end }}
+{{ if isset $data.options "scaleFontColor" }} scaleFontColor: {{ index $data.options "scaleFontColor"}}, {{ end }}
+{{ if isset $data.options "responsive" }} responsive: {{ index $data.options "responsive"}}, {{ end }}
+{{ if isset $data.options "maintainAspectRatio" }} maintainAspectRatio: {{ index $data.options "maintainAspectRatio"}}, {{ end }}
+{{ if isset $data.options "showTooltips" }} showTooltips: {{ index $data.options "showTooltips"}}, {{ end }}
+{{ if isset $data.options "customTooltips" }} customTooltips: {{ index $data.options "customTooltips"}}, {{ end }}
+{{ if isset $data.options "tooltipEvents" }} tooltipEvents: {{ index $data.options "tooltipEvents"}}, {{ end }}
+{{ if isset $data.options "tooltipFillColor" }} tooltipFillColor: {{ index $data.options "tooltipFillColor"}}, {{ end }}
+{{ if isset $data.options "tooltipFontFamily" }} tooltipFontFamily: {{ index $data.options "tooltipFontFamily"}}, {{ end }}
+{{ if isset $data.options "tooltipFontSize" }} tooltipFontSize: {{ index $data.options "tooltipFontSize"}}, {{ end }}
+{{ if isset $data.options "tooltipFontStyle" }} tooltipFontStyle: {{ index $data.options "tooltipFontStyle"}}, {{ end }}
+{{ if isset $data.options "tooltipFontColor" }} tooltipFontColor: {{ index $data.options "tooltipFontColor"}}, {{ end }}
+{{ if isset $data.options "tooltipTitleFontFamily" }} tooltipTitleFontFamily: {{ index $data.options "tooltipTitleFontFamily"}}, {{ end }}
+{{ if isset $data.options "tooltipTitleFontSize" }} tooltipTitleFontSize: {{ index $data.options "tooltipTitleFontSize"}}, {{ end }}
+{{ if isset $data.options "tooltipTitleFontStyle" }} tooltipTitleFontStyle: {{ index $data.options "tooltipTitleFontStyle"}}, {{ end }}
+{{ if isset $data.options "tooltipTitleFontColor" }} tooltipTitleFontColor: {{ index $data.options "tooltipTitleFontColor"}}, {{ end }}
+{{ if isset $data.options "tooltipYPadding" }} tooltipYPadding: {{ index $data.options "tooltipYPadding"}}, {{ end }}
+{{ if isset $data.options "tooltipXPadding" }} tooltipXPadding: {{ index $data.options "tooltipXPadding"}}, {{ end }}
+{{ if isset $data.options "tooltipCaretSize" }} tooltipCaretSize: {{ index $data.options "tooltipCaretSize"}}, {{ end }}
+{{ if isset $data.options "tooltipCornerRadius" }} tooltipCornerRadius: {{ index $data.options "tooltipCornerRadius"}}, {{ end }}
+{{ if isset $data.options "tooltipXOffset" }} tooltipXOffset: {{ index $data.options "tooltipXOffset"}}, {{ end }}
+{{ if isset $data.options "tooltipTemplate" }} tooltipTemplate: {{ index $data.options "tooltipTemplate"}}, {{ end }}
+{{ if isset $data.options "multiTooltipTemplate" }} multiTooltipTemplate: {{ index $data.options "multiTooltipTemplate"}}, {{ end }}
+{{ if isset $data.options "onAnimationProgress" }} onAnimationProgress: {{ index $data.options "onAnimationProgress"}}, {{ end }}
+{{ if isset $data.options "onAnimationComplete" }} onAnimationComplete: {{ index $data.options "onAnimationComplete"}}, {{ end }}
+{{ if isset $data.options "scaleShowGridLines" }} scaleShowGridLines: {{ index $data.options "scaleShowGridLines"}}, {{ end }}
+{{ if isset $data.options "scaleGridLineColor" }} scaleGridLineColor: {{ index $data.options "scaleGridLineColor"}}, {{ end }}
+{{ if isset $data.options "scaleGridLineWidth" }} scaleGridLineWidth: {{ index $data.options "scaleGridLineWidth"}}, {{ end }}
+{{ if isset $data.options "scaleShowHorizontalLines" }} scaleShowHorizontalLines: {{ index $data.options "scaleShowHorizontalLines"}}, {{ end }}
+{{ if isset $data.options "scaleShowVerticalLines" }} scaleShowVerticalLines: {{ index $data.options "scaleShowVerticalLines"}}, {{ end }}
+{{ if isset $data.options "barShowStroke" }} barShowStroke: {{ index $data.options "barShowStroke"}}, {{ end }}
+{{ if isset $data.options "barStrokeWidth" }} barStrokeWidth: {{ index $data.options "barStrokeWidth"}}, {{ end }}
+{{ if isset $data.options "barValueSpacing" }} barValueSpacing: {{ index $data.options "barValueSpacing"}}, {{ end }}
+{{ if isset $data.options "barDatasetSpacing" }} barDatasetSpacing: {{ index $data.options "barDatasetSpacing"}}, {{ end }}
+{{ if isset $data.options "legendTemplate" }} legendTemplate: {{ index $data.options "legendTemplate"}}, {{ end }}
+          };
+          var myLineChart = new Chart(ctx).Bar(data, options)
+          {{ else }}
+            var myLineChart = new Chart(ctx).Bar(data)
+          {{ end}}
+        </script>
+    {{ end }}
+{{ end }}
