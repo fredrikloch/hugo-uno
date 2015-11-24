@@ -2,7 +2,7 @@ hugo-uno
 ========
 
 A responsive hugo theme with awesome font's, charts and light-box galleries, the theme is based on [Uno](https://github.com/daleanthony/Uno) for ghost.
-A example site is available at [fredrikloch.me](http://fredrikloch.me)
+A example site is available at [hugouno.fredrikloch.me](http://hugouno.fredrikloch.me)
 
 A Swedish translation is available in the branch feature/swedish
 
@@ -33,7 +33,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
   bitbucket = "floch"
   flickr = "senjin"
   twitter = "senjindarshiva"
-  email = "fredrik.loch@outlook.com"
+  email = "mail@fredrikloch.me"
   description = ""
   cv = "/pages/cv"
   muut = "fredrikloch"
@@ -103,7 +103,6 @@ To add a gallery to the site we use basic html together with [lightGallery](http
     $("#lightGallery").lightGallery();
 </script>
 ```
-A running example can be found in my short [review of hugo](http://fredrikloch.me/post/Lightbox image's and a short review of hugo/)
 ## Features
 
 **Cover page**
