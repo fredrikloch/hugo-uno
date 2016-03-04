@@ -36,6 +36,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
   email = "mail@fredrikloch.me"
   description = ""
   cv = "/pages/cv"
+  legalnotice = "/pages/legal-notice"
   muut = "fredrikloch"
   linkedin = "fredrikloch"
   cover = "/images/background-cover.jpg"
