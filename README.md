@@ -63,6 +63,7 @@ To create charts I use [Chart.js](https://github.com/nnnick/Chart.js) which can 
 ```
 Where the javascript file specified contains the data for the chart, a basic example could look like this:
 ```
+
 $(function(){
   var chartData = {
       labels: ["Jekyll", "Hugo", "Wintersmith"],
@@ -77,13 +78,15 @@ $(function(){
           }
       ]
   };
-  var ctx = $("#chartData").get(0).getContext("2d");
-  var myBarChart = new Chart(ctx).Bar(data1, {
+
+  var ctx = $('#basicChart').get(0).getContext("2d");
+  var myBarChart = new Chart(ctx).Bar(chartData, {
       scaleBeginAtZero : true,
       responsive: true,
       maintainAspectRatio: false,
     }
   );
+  })
 ```
 A running example can be found in my comparison between [Jekyll, Hugo and Winthersmith](http://fredrikloch.me/post/2014-08-12-Jekyll-and-its-alternatives-from-a-site-generation-point-of-view/)
 Gallery
