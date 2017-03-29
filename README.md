@@ -1,3 +1,6 @@
+**I am no longer activly maintaing this theme, I will try to check out pull requests if possible**
+
+
 hugo-uno
 ========
 
