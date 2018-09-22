@@ -173,5 +173,5 @@ sass --watch static/scss:static/css
 To minify the css files use the following command in the static folder
 
 ```bash
-curl -X POST -s --data-urlencode 'input@static/css/uno.css' http://cssminifier.com/raw > static/css/uno.min.css
+curl -X POST -s --data-urlencode 'input@static/css/uno.css' https://cssminifier.com/raw > static/css/uno.min.css
 ```
